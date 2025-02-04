@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@CrossOrigin(origins = "https://movie-reviews-react.vercel.app")
+@CrossOrigin
 public class SearchController {
     @Autowired
      MovieService service;
