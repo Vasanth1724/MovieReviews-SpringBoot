@@ -10,7 +10,9 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("https://movie-reviews-react.vercel.app/")
-                .allowedMethods("GET", "POST", "PUT", "DELETE");
+                .allowedOrigins("https://movie-reviews-react.vercel.app") // Correct without trailing slash
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Include OPTIONS for preflight requests
+                .allowedHeaders("*") // Allow all headers
+                .allowCredentials(true); // Allow credentials if needed
     }
 }
