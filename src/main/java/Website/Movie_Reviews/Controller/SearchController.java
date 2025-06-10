@@ -3,25 +3,35 @@ package Website.Movie_Reviews.Controller;
 import Website.Movie_Reviews.Model.Movies;
 import Website.Movie_Reviews.Service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin
+@RequestMapping("/api")
 public class SearchController {
-    @Autowired
-     MovieService service;
-   @GetMapping("/movies")
-   public List<Movies> Movies(){
 
-       return service.getMovies();
-   }
-   @GetMapping("/movies/{name}")
-    public List<Movies> searchByName(@PathVariable String name){
-       return service.getMovies().stream()
-               .filter(movies -> movies.getName().equalsIgnoreCase(name))
-               .collect(Collectors.toList());
-   }
+    private final MovieService service;
+
+    @Autowired
+    public SearchController(MovieService service) {
+        this.service = service;
+    }
+
+    @GetMapping("/movies")
+    public ResponseEntity<List<Movies>> getAllMovies() {
+        List<Movies> movies = service.getMovies();
+        if (movies.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(movies);
+    }
+
+    @GetMapping("/movies/search")
+    public ResponseEntity<List<Movies>> searchByName(@RequestParam String title) {
+        List<Movies> filteredMovies = service.searchMoviesByTitle(title);
+        return filteredMovies.isEmpty() ? ResponseEntity.notFound().build() : ResponseEntity.ok(filteredMovies);
+    }
 }

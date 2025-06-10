@@ -1,5 +1,5 @@
 Website\Movie_Reviews\Service\MovieService.class
-Website\Movie_Reviews\WebConfig.class
 Website\Movie_Reviews\MovieReviewsApplication.class
-Website\Movie_Reviews\Model\Movies.class
 Website\Movie_Reviews\Controller\SearchController.class
+Website\Movie_Reviews\WebConfig.class
+Website\Movie_Reviews\Model\Movies.class

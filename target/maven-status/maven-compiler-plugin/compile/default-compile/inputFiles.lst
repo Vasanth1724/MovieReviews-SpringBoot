@@ -1,5 +1,8 @@
 D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Controller\SearchController.java
+D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Controller\SupabaseController.java
+D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Database\SupabaseSetUp.java
 D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Model\Movies.java
 D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\MovieReviewsApplication.java
+D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Repository\MovieReviewRepository.java
 D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Service\MovieService.java
 D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\WebConfig.java

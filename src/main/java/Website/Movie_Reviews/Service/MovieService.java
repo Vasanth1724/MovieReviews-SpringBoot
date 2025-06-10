@@ -1,23 +1,34 @@
 package Website.Movie_Reviews.Service;
 
-
+import Website.Movie_Reviews.Database.SupabaseSetUp;
 import Website.Movie_Reviews.Model.Movies;
+import Website.Movie_Reviews.Repository.MovieReviewRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Service
 public class MovieService {
 
-List<Movies> movies= Arrays.asList(
-        new Movies(1,"Marco",2025),
-        new Movies(2,"Premam",2015),
-        new Movies(3,"Thalapathi",1991),
-        new Movies(4,"Goat",2024)
-);
-    public List<Movies> getMovies() {
-        return movies;
+    private final SupabaseSetUp supabaseSetUp;
+    private final MovieReviewRepository movieRepository;
+
+    @Autowired
+    public MovieService(MovieReviewRepository movieRepository, SupabaseSetUp supabaseSetUp) {
+        this.movieRepository = movieRepository;
+        this.supabaseSetUp = supabaseSetUp;
     }
 
+    public String fetchMoviesFromSupabase() {
+        return supabaseSetUp.getAllUsers();  // Example Supabase call
+    }
+
+    public List<Movies> getMovies() {
+        return movieRepository.findAll();
+    }
+
+    public List<Movies> searchMoviesByTitle(String title) {
+        return movieRepository.findByTitleContainingIgnoreCase(title);
+    }
 }
