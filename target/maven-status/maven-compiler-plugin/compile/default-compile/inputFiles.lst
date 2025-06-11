@@ -1,8 +1,14 @@
-D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Controller\SearchController.java
+D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\AppConfig.java
 D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Controller\SupabaseController.java
 D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Database\SupabaseSetUp.java
+D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Model\Comments.java
+D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Model\Image.java
+D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Model\MovieActors.java
+D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Model\MovieCategoryMap.java
+D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Model\MovieDirector.java
 D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Model\Movies.java
+D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Model\Reviews.java
+D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Model\Trailers.java
 D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\MovieReviewsApplication.java
-D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Repository\MovieReviewRepository.java
 D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\Service\MovieService.java
 D:\Project\Movie_Spring\src\main\java\Website\Movie_Reviews\WebConfig.java

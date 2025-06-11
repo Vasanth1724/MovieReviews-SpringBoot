@@ -1,5 +1,14 @@
-Website\Movie_Reviews\Service\MovieService.class
+Website\Movie_Reviews\Model\Reviews.class
+Website\Movie_Reviews\Model\Image.class
 Website\Movie_Reviews\MovieReviewsApplication.class
-Website\Movie_Reviews\Controller\SearchController.class
+Website\Movie_Reviews\Model\MovieDirector.class
+Website\Movie_Reviews\Model\Comments.class
+Website\Movie_Reviews\AppConfig.class
+Website\Movie_Reviews\Controller\SupabaseController.class
 Website\Movie_Reviews\WebConfig.class
+Website\Movie_Reviews\Model\MovieCategoryMap.class
+Website\Movie_Reviews\Service\MovieService.class
+Website\Movie_Reviews\Database\SupabaseSetUp.class
+Website\Movie_Reviews\Model\Trailers.class
+Website\Movie_Reviews\Model\MovieActors.class
 Website\Movie_Reviews\Model\Movies.class
